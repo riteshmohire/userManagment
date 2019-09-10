@@ -18,12 +18,19 @@ function create(req, res) {
     // Connect Database
     const collection = global.db.collection(global.config.usersCollection);
 
-    // Insert some documents
-    collection.insertOne(req.body, function (err, result) {
-        let message = err === null ? result : { "message": "User Name may be present or something went wrong" }
-        let status = err === null ? 201 : 400
-        res.status(status).send(message)
-    });
+    // Check user name already present or not
+    collection.find({}).toArray(function (err, result) {
+        if (result && result.length) {
+            res.status(400).send("User name already present ! Please try with another one !!")
+        }else{
+            // Insert some documents
+            collection.insertOne(req.body, function (err, result) {
+                let message = err === null ? result : { "message": "User Name may be present or something went wrong" }
+                let status = err === null ? 201 : 400
+                res.status(status).send(message)
+            });
+        }
+    })
 }
 
 /******************************* Export router *****************************************/

@@ -1,5 +1,9 @@
 # userManagment
 
+# MongoDB config -
+
+Create "newProject" database and "users" collection in MongoDB
+
 # Start server -
 
 Execute command - node app.js 
