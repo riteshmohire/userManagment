@@ -18,7 +18,7 @@ Server will start on port number 3000
 # POSTMAN collection - 
 
 Get postman collection at root level - UserManagment.postman_collection.json
-Git Link - 
+Git Link - https://github.com/riteshmohire/userManagment/blob/master/UserManagment.postman_collection.json
 
 # Test
 
