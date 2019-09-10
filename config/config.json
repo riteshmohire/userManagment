@@ -1,0 +1,7 @@
+{
+  "pageSize" : 10,
+  "secret" : "secret",
+  "dbUrl" : "mongodb://localhost:27017",
+  "dbName" : "newProject",
+  "usersCollection" : "users"
+}
