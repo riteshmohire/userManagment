@@ -1,0 +1,34 @@
+{
+  "name": "usermanagment",
+  "version": "1.0.0",
+  "description": "Will be used to anages user operations",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riteshmohire/userManagment.git"
+  },
+  "keywords": [
+    "usermangment"
+  ],
+  "author": "Ritesh Mohire",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riteshmohire/userManagment/issues"
+  },
+  "homepage": "https://github.com/riteshmohire/userManagment#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "express": "^4.17.1",
+    "helmet": "^3.21.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.3.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.2.0"
+  }
+}

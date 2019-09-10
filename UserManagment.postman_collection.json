@@ -1,0 +1,181 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Test",
+		"_postman_id": "24be7cd1-ccbe-5abb-8c43-12f87d5606bf",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"description": "",
+			"item": [
+				{
+					"name": "Get ",
+					"request": {
+						"url": {
+							"raw": "http://localhost:3000/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NDM5MDQyMjgsImV4cCI6MTU0MzkwNDU5OCwiZGF0YSI6eyJfaWQiOiJUd2l0dGVyRGV2IiwiX3JldiI6IjEtOTg0ZDg1Zjc5MmYzYWNlODhiNzk5MGU4MWQ0MTNlZGYiLCJuYW1lIjoiVHdpdHRlckRldiIsInNjcmVlbl9uYW1lIjoiVHdpdHRlckRldiIsImxvY2F0aW9uIjoiSW50ZXJuZXQiLCJkZXNjcmlwdGlvbiI6IllvdXIgc291cmNlIGZvciBUd2l0dGVyIG5ld3MiLCJ2ZXJpZmllZCI6dHJ1ZSwiY3JlYXRlZF9hdCI6IjIwMTgtMTItMDNUMDM6NTc6MzEuNTk0WiIsImxhbmciOiJlbiIsInBhc3N3b3JkIjoiJDJiJDEwJEZJbFk3b0F6Zld3dU5ZQU83WjlOVE9uejd1b2dEeWQxVGhlOEZoY1BXYW4yVjBHa1hGdy5XIn19.jNi9Z9zZpaoqCCUVP8Hbmo0Rtl4x5N4z6H33b6jW9PU",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjgwOTI2OTQsImV4cCI6MTU2ODA5NjMwNCwiZGF0YSI6W3siX2lkIjoiNWQ3NmE3MThhYzM5ZDA0M2UwNDRjMWEzIiwidXNlciI6InVzZXIxIiwicGFzc3dvcmQiOiIkMmIkMTAkSUxPRkRrZ0RKVVdxbzlJdi5KbGlCZTF2QU9LRTZyUmZRbFZFTmxCTFhpLlRmSE1SSjZsVkcifV19.Z38wbLBEBFuhrUXvqMkGrqYd6qCN4JP1vRLBgiNc10o",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Save",
+					"request": {
+						"url": "http://localhost:3000/user/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NDM4OTkyODUsImV4cCI6MTU0Mzg5OTMwNSwiZGF0YSI6eyJhYWFhIjoxMjN9fQ.ckBURG6DBiaX093C-UDEpyP1a7ewVQ_HEQAsTLCgNPg",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"user3\",\r\n    \"password\" : \"1234\",\r\n    \"confirmPassword\" : \"1234\"\r\n  }\r\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"url": "http://localhost:3000/user/user2",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjgwNTc2MDMsImV4cCI6MTU2ODA2MTIxMywiZGF0YSI6W3siX2lkIjoiNWQ3NmE3MThhYzM5ZDA0M2UwNDRjMWEzIiwidXNlciI6InVzZXIxIiwicGFzc3dvcmQiOiIkMmIkMTAkSUxPRkRrZ0RKVVdxbzlJdi5KbGlCZTF2QU9LRTZyUmZRbFZFTmxCTFhpLlRmSE1SSjZsVkcifV19.v8iYDnzpuehNSvU8fvg02Bdgimcc96ILrx6ozrr2lyM",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"password\": \"4321\",\n  \"user\": \"user2.0\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"url": "http://localhost:3000/user/user3",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjgwNTc2MDMsImV4cCI6MTU2ODA2MTIxMywiZGF0YSI6W3siX2lkIjoiNWQ3NmE3MThhYzM5ZDA0M2UwNDRjMWEzIiwidXNlciI6InVzZXIxIiwicGFzc3dvcmQiOiIkMmIkMTAkSUxPRkRrZ0RKVVdxbzlJdi5KbGlCZTF2QU9LRTZyUmZRbFZFTmxCTFhpLlRmSE1SSjZsVkcifV19.v8iYDnzpuehNSvU8fvg02Bdgimcc96ILrx6ozrr2lyM",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "session",
+			"description": "",
+			"item": [
+				{
+					"name": "Logout",
+					"request": {
+						"url": "http://localhost:3000/session/",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjgwNTc2MDMsImV4cCI6MTU2ODA2MTIxMywiZGF0YSI6W3siX2lkIjoiNWQ3NmE3MThhYzM5ZDA0M2UwNDRjMWEzIiwidXNlciI6InVzZXIxIiwicGFzc3dvcmQiOiIkMmIkMTAkSUxPRkRrZ0RKVVdxbzlJdi5KbGlCZTF2QU9LRTZyUmZRbFZFTmxCTFhpLlRmSE1SSjZsVkcifV19.v8iYDnzpuehNSvU8fvg02Bdgimcc96ILrx6ozrr2lyM",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\" : \"TwitterDev\",\n\t\"password\" : \"1234\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"url": "http://localhost:3000/session/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user\": \"user1\",\n  \"password\": \"1234\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

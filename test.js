@@ -91,9 +91,9 @@ describe('User', () => {
 
   });
 
-  // after(function () {
-  //   process.exit(1)
-  // });
+  after(function () {
+    process.exit(1)
+  });
 });
 
 
