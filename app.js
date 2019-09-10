@@ -36,7 +36,7 @@ app.delete('/session', logout)
 app.post('/user', require(process.cwd() + "/controllers/users/create"))
 
 // Users route
-app.use('/user', users)
+app.use('/user', authenticate, users)
  
 app.get('/', function (req, res) {
   res.send('Wel come')
